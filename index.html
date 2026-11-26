@@ -42,10 +42,14 @@
 
 <main id="main">
 
-  <!-- Hero: the company line over a muted loop of its work (11 s from the Skul 1.0 trailer). When a newer game ships, swap the clip and poster. -->
+  <!-- Hero: the company line over an 8 s looping motion sting of the fist mark (Remotion source: HomeHero).
+       Phones get a 4:3 crop (x 480-1920 of the 1920x1080 master) and its own poster; site.js swaps the poster. -->
   <section class="hero hero--home hero--video" id="top" aria-labelledby="hero-title">
     <div class="hero__art">
-      <video class="hero__video" src="assets/web/home-hero.mp4" poster="assets/web/home-hero-poster.webp" width="1280" height="620" muted loop playsinline preload="auto" aria-hidden="true" data-autoplay></video>
+      <video class="hero__video" poster="assets/web/home-hero-poster.webp" data-poster-mobile="assets/web/home-hero-mobile-poster.webp" width="1600" height="900" muted loop playsinline preload="auto" aria-hidden="true" data-autoplay>
+        <source src="assets/web/home-hero-mobile.mp4" type="video/mp4" media="(max-width: 48rem)">
+        <source src="assets/web/home-hero.mp4" type="video/mp4">
+      </video>
     </div>
     <button class="hero__pause" type="button" aria-pressed="false" data-video-toggle aria-label="배경 영상 일시정지" data-en-aria="Pause background video">
       <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path class="i-pause" d="M7 5h3v14H7zM14 5h3v14h-3z" fill="currentColor"/><path class="i-play" d="M8 5v14l11-7z" fill="currentColor"/></svg>

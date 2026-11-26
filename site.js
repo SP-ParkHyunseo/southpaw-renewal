@@ -82,6 +82,8 @@
   const heroVideo = document.querySelector('video[data-autoplay]');
   const videoToggle = document.querySelector('[data-video-toggle]');
   if (heroVideo) {
+    // phones show a 4:3 crop of the loop, so they also get the matching poster
+    if (heroVideo.dataset.posterMobile && matchMedia('(max-width: 48rem)').matches) heroVideo.poster = heroVideo.dataset.posterMobile;
     const L = { ko: ['배경 영상 일시정지', '배경 영상 재생'], en: ['Pause background video', 'Play background video'] };
     const setState = (paused) => {
       if (!videoToggle) return;
