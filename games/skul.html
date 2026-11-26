@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Skul: The Hero Slayer | SouthPAW Games</title>
+<meta name="description" content="사우스포게임즈의 2D 로그라이트 액션 플랫포머, Skul: The Hero Slayer.">
+<meta name="theme-color" content="#1a1527">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="SouthPAW Games">
+<meta property="og:title" content="Skul: The Hero Slayer">
+<meta property="og:description" content="사우스포게임즈의 2D 로그라이트 액션 플랫포머, Skul: The Hero Slayer.">
+<meta property="og:url" content="https://southpaw.games/games/skul.html">
+<meta property="og:image" content="https://southpaw.games/assets/web/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="../assets/web/mark-light.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="../style.css">
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+<!--
+  Game page template. To add a game, copy this file to games/<id>.html and replace:
+  title and meta tags, hero art, name and genre, story, key art, Steam link, trailer id, screenshots, press lines.
+  Then add its card to the catalogue in ../index.html (#games).
+-->
+<a class="skip" href="#main" data-en="Skip to content">본문으로 건너뛰기</a>
+
+<header class="nav">
+  <div class="container nav__row">
+    <a class="nav__home" href="../" aria-label="SouthPAW Games 처음으로" data-en-aria="SouthPAW Games home">
+      <img src="../assets/web/mark-light.png" width="185" height="183" alt="">
+    </a>
+    <nav aria-label="주요 메뉴" data-en-aria="Main">
+      <ul class="nav__links">
+        <li class="nav__extra"><a href="../#studio" data-en="Studio">스튜디오</a></li>
+        <li><a href="../#games" data-en="Games">게임</a></li>
+        <li><a href="../#contact" data-en="Contact">문의</a></li>
+      </ul>
+    </nav>
+    <button class="lang" type="button" data-lang-toggle lang="en" aria-label="EN, switch to English">EN</button>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero" id="top" aria-labelledby="hero-title">
+    <picture class="hero__art">
+      <source media="(max-width: 48rem)" srcset="../assets/web/hero-mobile.webp" width="800" height="900">
+      <img src="../assets/web/hero-1920.webp" width="1920" height="1080" alt="낫을 든 스컬이 보라색 마력 구체 사이에서 싸우는 전투 장면" data-en-alt="Skul with a scythe, fighting among glowing purple orbs of magic" fetchpriority="high">
+    </picture>
+    <div class="container hero__body">
+      <p class="hero__crumb"><a class="textlink" href="../#games" data-en="SouthPAW Games: our games">사우스포게임즈의 게임</a></p>
+      <h1 id="hero-title" lang="en">Skul: The Hero Slayer</h1>
+      <p class="lead hero__lead" data-en="A 2D rogue-lite action platformer, out now on Steam.">2D 로그라이트 액션 플랫포머. Steam에서 판매 중입니다.</p>
+      <div class="hero__actions">
+        <a class="btn" href="https://store.steampowered.com/app/1147560/Skul_The_Hero_Slayer/" data-en="Get Skul on Steam">Steam에서 Skul 보기</a>
+        <a class="btn btn--quiet" href="#screens" data-en="Watch the trailer">트레일러 보기</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="skul" id="story" aria-labelledby="story-title">
+    <div class="container skul__grid">
+      <figure class="skul__art">
+        <img src="../assets/web/skul-keyart.webp" width="588" height="888" loading="lazy" decoding="async" alt="Skul: The Hero Slayer 키아트. 거대한 용사 아래 서 있는 꼬마 스켈레톤 스컬" data-en-alt="Skul: The Hero Slayer key art. The little skeleton Skul stands below a towering hero">
+      </figure>
+      <div class="skul__words">
+        <h2 id="story-title" data-en="One skeleton against the heroes">용사에 맞서는 꼬마 스켈레톤</h2>
+        <p class="skul__story" data-en="Skul, a little skeleton who guards the Demon King’s castle, sets out alone against the heroes, the adventurers and the imperial army to rescue the Demon King, captured by humans.">마왕성 경비를 맡고 있는 꼬마 스켈레톤 ‘스컬’은 인간들에게 붙잡혀간 마왕을 구하기 위해 용사와 모험가, 그리고 제국군에 홀로 맞서 싸우기 시작합니다.</p>
+        <div class="store">
+          <p class="store__label" data-en="Available on">판매처</p>
+          <a class="store__steam" href="https://store.steampowered.com/app/1147560/Skul_The_Hero_Slayer/" aria-label="Steam에서 Skul: The Hero Slayer 보기" data-en-aria="Skul: The Hero Slayer on Steam">
+            <img src="../assets/web/steam.png" width="126" height="40" alt="">
+          </a>
+        </div>
+        <a class="textlink" href="https://southpaw.games/wp-content/uploads/2021/05/Skul-Press-Kit.zip" data-en="Download the press kit (zip)">프레스 킷 내려받기 (zip)</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="screens" id="screens" aria-labelledby="screens-title">
+    <div class="container">
+      <h2 id="screens-title" data-en="Skul in play">Skul 플레이 화면</h2>
+      <a class="trailer" href="https://www.youtube.com/watch?v=xIuTTNpxyfY" data-yt="xIuTTNpxyfY">
+        <img src="../assets/web/trailer-poster.webp" srcset="../assets/web/trailer-poster-800.webp 800w, ../assets/web/trailer-poster.webp 1920w" sizes="(min-width: 90rem) 1312px, 100vw" width="1920" height="1080" loading="lazy" decoding="async" alt="">
+        <span class="trailer__play"><svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg><span data-en="Watch the trailer">트레일러 보기</span><span class="visually-hidden"> (YouTube)</span></span>
+      </a>
+      <div class="rail__head">
+        <p class="rail__hint" data-en="Click a screenshot to enlarge it">스크린샷을 누르면 크게 볼 수 있습니다</p>
+        <div class="rail__controls">
+          <button class="rail__btn" type="button" data-rail="-1" aria-label="이전 스크린샷" data-en-aria="Previous screenshots"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button>
+          <button class="rail__btn" type="button" data-rail="1" aria-label="다음 스크린샷" data-en-aria="Next screenshots"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button>
+        </div>
+      </div>
+    </div>
+    <div class="rail" tabindex="0" role="region" aria-labelledby="screens-title">
+      <ul class="rail__track">
+        <li><button class="rail__item" type="button" data-full="../assets/web/skul-3.webp"><img src="../assets/web/skul-3.webp" width="1280" height="720" decoding="async" alt="보랏빛 수정이 박힌 거대한 나무 보스" data-en-alt="A giant tree boss studded with purple crystals"></button></li>
+        <li><button class="rail__item" type="button" data-full="../assets/web/skul-5.webp"><img src="../assets/web/skul-5.webp" width="1280" height="720" decoding="async" alt="분홍빛 궁전에서 수녀와 기사에게 공격을 날리는 스컬" data-en-alt="Skul striking a nun and a knight in a pink palace"></button></li>
+        <li><button class="rail__item" type="button" data-full="../assets/web/skul-8.webp"><img src="../assets/web/skul-8.webp" width="1280" height="720" decoding="async" alt="조명이 쏟아지는 무대 위의 천사 보스 전투" data-en-alt="An angel boss fight on a stage under spotlights"></button></li>
+        <li><button class="rail__item" type="button" data-full="../assets/web/skul-2.webp"><img src="../assets/web/skul-2.webp" width="1280" height="720" decoding="async" alt="숲 속 감옥 수레 앞에 늘어선 제국군 병사들" data-en-alt="Imperial soldiers lined up by a prison cart in the forest"></button></li>
+        <li><button class="rail__item" type="button" data-full="../assets/web/skul-1.webp"><img src="../assets/web/skul-1.webp" width="1280" height="720" decoding="async" alt="무너진 성 기둥 사이를 달리는 꼬마 스켈레톤 스컬" data-en-alt="Little Skul running between the ruined pillars of a castle"></button></li>
+        <li><button class="rail__item" type="button" data-full="../assets/web/skul-4.webp"><img src="../assets/web/skul-4.webp" width="1280" height="720" decoding="async" alt="마녀가 지켜보는 가운데 특성을 고르는 화면" data-en-alt="Choosing traits while the Witch looks on"></button></li>
+      </ul>
+    </div>
+    <dialog class="viewer" aria-label="스크린샷 크게 보기" data-en-aria="Screenshot viewer">
+      <button class="viewer__close" type="button" data-close data-en="Close">닫기</button>
+    </dialog>
+  </section>
+
+  <section class="press" id="press" aria-labelledby="press-title">
+    <div class="container press__grid">
+      <h2 id="press-title" data-en="Skul in the press">매체가 본 Skul</h2>
+      <ul class="press__rows">
+        <li>
+          <blockquote lang="en"><p>“There’s awesome combat and loads of replayability in this bone-afide retro rogue-lite.”</p></blockquote>
+          <p class="press__source" lang="en">IGN</p>
+        </li>
+        <li>
+          <blockquote lang="en"><p>“absolutely beautiful pixel art”</p></blockquote>
+          <p class="press__source" lang="en">PC Gamer</p>
+        </li>
+        <li>
+          <blockquote lang="en"><p>“a new level of challenge that will keep you on the edge of your seat”</p></blockquote>
+          <p class="press__source" lang="en">Indie Games Plus</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="close" aria-labelledby="close-title">
+    <div class="container close__row">
+      <h2 id="close-title" data-en="Play Skul on Steam">Skul은 Steam에서</h2>
+      <div class="close__actions">
+        <a class="btn btn--on-field" href="https://store.steampowered.com/app/1147560/Skul_The_Hero_Slayer/" data-en="Go to the Steam page">Steam 페이지로 가기</a>
+        <a class="close__link" href="../#games" data-en="All SouthPAW games">게임 목록으로</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer__grid">
+    <img class="footer__logo" src="../assets/web/logo-light.png" width="595" height="307" alt="SouthPAW Games">
+    <div class="footer__info">
+      <p data-en="SouthPAW Games Co., Ltd.">사우스포게임즈(주)</p>
+      <p data-en="4F Jinran Hall, 23 Hyoryeong-ro 53-gil, Seocho-gu, Seoul 06653">(06653) 서울 서초구 효령로53길 23, 진란회관 4층</p>
+    </div>
+    <ul class="footer__links">
+      <li><a href="../" data-en="SouthPAW Games home">사우스포게임즈 홈</a></li>
+      <li><a href="https://southpaw.games/wp-content/uploads/2021/05/Skul-Press-Kit.zip" data-en="Skul press kit">Skul 프레스 킷</a></li>
+      <li><a href="../#contact" data-en="Contact">문의</a></li>
+    </ul>
+    <p class="footer__legal" lang="en">ⓒ 2026 SouthPAW Games Co., Ltd. All Rights Reserved</p>
+  </div>
+</footer>
+
+<script src="../site.js" defer></script>
+</body>
+</html>
