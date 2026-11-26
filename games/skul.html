@@ -92,27 +92,19 @@
         <img src="../assets/web/trailer-poster.webp" srcset="../assets/web/trailer-poster-800.webp 800w, ../assets/web/trailer-poster.webp 1920w" sizes="(min-width: 90rem) 1312px, 100vw" width="1920" height="1080" loading="lazy" decoding="async" alt="">
         <span class="trailer__play"><svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg><span data-en="Watch the trailer">트레일러 보기</span><span class="visually-hidden"> (YouTube)</span></span>
       </a>
-      <div class="rail__head">
-        <p class="rail__hint" data-en="Click a screenshot to enlarge it">스크린샷을 누르면 크게 볼 수 있습니다</p>
-        <div class="rail__controls">
-          <button class="rail__btn" type="button" data-rail="-1" aria-label="이전 스크린샷" data-en-aria="Previous screenshots"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button>
-          <button class="rail__btn" type="button" data-rail="1" aria-label="다음 스크린샷" data-en-aria="Next screenshots"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button>
-        </div>
+      <!-- Screenshot gallery: thumbnails choose the large shot. To add one, add an li/button with data-src and both alts. -->
+      <div class="gallery gallery--shots" data-gallery>
+        <img class="gallery__main" src="../assets/web/skul-3.webp" width="1280" height="720" decoding="async" alt="보랏빛 수정이 박힌 거대한 나무 보스" data-en-alt="A giant tree boss studded with purple crystals">
+        <ul class="gallery__thumbs" aria-label="스크린샷 고르기" data-en-aria="Choose a screenshot">
+          <li><button class="gallery__thumb" type="button" aria-pressed="true" data-src="../assets/web/skul-3.webp"><img src="../assets/web/skul-3.webp" width="1280" height="720" loading="lazy" decoding="async" alt="보랏빛 수정이 박힌 거대한 나무 보스" data-en-alt="A giant tree boss studded with purple crystals"></button></li>
+          <li><button class="gallery__thumb" type="button" aria-pressed="false" data-src="../assets/web/skul-5.webp"><img src="../assets/web/skul-5.webp" width="1280" height="720" loading="lazy" decoding="async" alt="분홍빛 궁전에서 수녀와 기사에게 공격을 날리는 스컬" data-en-alt="Skul striking a nun and a knight in a pink palace"></button></li>
+          <li><button class="gallery__thumb" type="button" aria-pressed="false" data-src="../assets/web/skul-8.webp"><img src="../assets/web/skul-8.webp" width="1280" height="720" loading="lazy" decoding="async" alt="조명이 쏟아지는 무대 위의 천사 보스 전투" data-en-alt="An angel boss fight on a stage under spotlights"></button></li>
+          <li><button class="gallery__thumb" type="button" aria-pressed="false" data-src="../assets/web/skul-2.webp"><img src="../assets/web/skul-2.webp" width="1280" height="720" loading="lazy" decoding="async" alt="숲 속 감옥 수레 앞에 늘어선 제국군 병사들" data-en-alt="Imperial soldiers lined up by a prison cart in the forest"></button></li>
+          <li><button class="gallery__thumb" type="button" aria-pressed="false" data-src="../assets/web/skul-1.webp"><img src="../assets/web/skul-1.webp" width="1280" height="720" loading="lazy" decoding="async" alt="무너진 성 기둥 사이를 달리는 꼬마 스켈레톤 스컬" data-en-alt="Little Skul running between the ruined pillars of a castle"></button></li>
+          <li><button class="gallery__thumb" type="button" aria-pressed="false" data-src="../assets/web/skul-4.webp"><img src="../assets/web/skul-4.webp" width="1280" height="720" loading="lazy" decoding="async" alt="마녀가 지켜보는 가운데 특성을 고르는 화면" data-en-alt="Choosing traits while the Witch looks on"></button></li>
+        </ul>
       </div>
     </div>
-    <div class="rail" tabindex="0" role="region" aria-labelledby="screens-title">
-      <ul class="rail__track">
-        <li><button class="rail__item" type="button" data-full="../assets/web/skul-3.webp"><img src="../assets/web/skul-3.webp" width="1280" height="720" decoding="async" alt="보랏빛 수정이 박힌 거대한 나무 보스" data-en-alt="A giant tree boss studded with purple crystals"></button></li>
-        <li><button class="rail__item" type="button" data-full="../assets/web/skul-5.webp"><img src="../assets/web/skul-5.webp" width="1280" height="720" decoding="async" alt="분홍빛 궁전에서 수녀와 기사에게 공격을 날리는 스컬" data-en-alt="Skul striking a nun and a knight in a pink palace"></button></li>
-        <li><button class="rail__item" type="button" data-full="../assets/web/skul-8.webp"><img src="../assets/web/skul-8.webp" width="1280" height="720" decoding="async" alt="조명이 쏟아지는 무대 위의 천사 보스 전투" data-en-alt="An angel boss fight on a stage under spotlights"></button></li>
-        <li><button class="rail__item" type="button" data-full="../assets/web/skul-2.webp"><img src="../assets/web/skul-2.webp" width="1280" height="720" decoding="async" alt="숲 속 감옥 수레 앞에 늘어선 제국군 병사들" data-en-alt="Imperial soldiers lined up by a prison cart in the forest"></button></li>
-        <li><button class="rail__item" type="button" data-full="../assets/web/skul-1.webp"><img src="../assets/web/skul-1.webp" width="1280" height="720" decoding="async" alt="무너진 성 기둥 사이를 달리는 꼬마 스켈레톤 스컬" data-en-alt="Little Skul running between the ruined pillars of a castle"></button></li>
-        <li><button class="rail__item" type="button" data-full="../assets/web/skul-4.webp"><img src="../assets/web/skul-4.webp" width="1280" height="720" decoding="async" alt="마녀가 지켜보는 가운데 특성을 고르는 화면" data-en-alt="Choosing traits while the Witch looks on"></button></li>
-      </ul>
-    </div>
-    <dialog class="viewer" aria-label="스크린샷 크게 보기" data-en-aria="Screenshot viewer">
-      <button class="viewer__close" type="button" data-close data-en="Close">닫기</button>
-    </dialog>
   </section>
 
   <section class="press" id="press" aria-labelledby="press-title">

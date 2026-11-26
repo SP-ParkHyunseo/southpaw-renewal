@@ -78,42 +78,6 @@
     });
   });
 
-  // ---------- screenshots: rail buttons and viewer ----------
-  const rail = document.querySelector('.rail');
-  const btns = document.querySelectorAll('[data-rail]');
-  if (rail) {
-    const step = () => (rail.querySelector('li')?.getBoundingClientRect().width || 400) + 16;
-    const sync = () => {
-      const max = rail.scrollWidth - rail.clientWidth - 2;
-      btns.forEach((b) => { b.disabled = b.dataset.rail === '-1' ? rail.scrollLeft <= 2 : rail.scrollLeft >= max; });
-    };
-    const smooth = () => (matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth');
-    btns.forEach((b) => b.addEventListener('click', () => rail.scrollBy({ left: Number(b.dataset.rail) * step(), behavior: smooth() })));
-    rail.addEventListener('scroll', sync, { passive: true });
-    addEventListener('resize', sync);
-    sync();
-  } else {
-    btns.forEach((b) => { b.hidden = true; });
-  }
-
-  const viewer = document.querySelector('.viewer');
-  if (viewer && typeof viewer.showModal === 'function') {
-    const big = document.createElement('img');
-    big.width = 1280; big.height = 720; big.alt = '';
-    viewer.prepend(big);
-    let opener = null;
-    document.querySelectorAll('.rail__item').forEach((item) => item.addEventListener('click', () => {
-      const thumb = item.querySelector('img');
-      big.src = item.dataset.full;
-      big.alt = thumb.alt;
-      opener = item;
-      viewer.showModal();
-    }));
-    viewer.querySelector('[data-close]').addEventListener('click', () => viewer.close());
-    viewer.addEventListener('click', (e) => { if (e.target === viewer) viewer.close(); });
-    viewer.addEventListener('close', () => opener?.focus());
-  }
-
   // ---------- hero video: muted loop, paused for reduced motion, with a pause button ----------
   const heroVideo = document.querySelector('video[data-autoplay]');
   const videoToggle = document.querySelector('[data-video-toggle]');
