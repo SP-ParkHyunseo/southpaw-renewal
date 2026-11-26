@@ -65,7 +65,11 @@ h2 { margin-bottom: var(--space-lg); }
 /* ---------- home hero: the company over a frame of its work ---------- */
 .hero--home .hero__art img { object-position: 72% 50%; }
 .hero--home .hero__art { inset: 0; }
-.hero__video { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 60% 50%; background: var(--color-paper); }
+.hero__video { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 50% 50%; background: var(--color-paper); }
+/* home: the whole frame shows; a light veil on the left keeps the headline readable */
+.hero--home::after { background:
+  linear-gradient(0deg, var(--color-paper) 0%, var(--color-paper-clear) 30%),
+  linear-gradient(90deg, color-mix(in oklch, var(--color-paper) 80%, transparent) 0%, color-mix(in oklch, var(--color-paper) 45%, transparent) 38%, var(--color-paper-clear) 65%); }
 .hero__pause { position: absolute; right: max(var(--space-lg), env(safe-area-inset-right, 0px)); bottom: var(--space-lg); z-index: 1; display: grid; place-items: center; width: 44px; height: 44px; border: 1px solid var(--color-muted); border-radius: var(--radius-pill); background: var(--color-paper-veil); color: var(--color-ink); cursor: pointer; }
 .hero__pause:hover { background: var(--color-paper-3); }
 .hero__pause:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 3px; }
@@ -251,6 +255,12 @@ h2 { margin-bottom: var(--space-lg); }
   .press__rows li { grid-template-columns: minmax(0, 1fr); gap: var(--space-xs); }
   .press__source { text-align: left; }
   :is(.press, .praise) blockquote p { text-indent: 0; }
+  /* home: the clip keeps its own shape on tall screens instead of being blown up to fill them */
+  .hero--home { min-height: 0; padding-top: calc(72px + 75vw + var(--space-lg)); padding-bottom: var(--space-2xl); }
+  .hero--home .hero__art { inset: 72px 0 auto 0; height: auto; }
+  .hero--home .hero__video { height: auto; aspect-ratio: 4 / 3; }
+  .hero--home::after { inset: 72px 0 auto 0; height: 75vw; background: linear-gradient(0deg, var(--color-paper) 0%, var(--color-paper-clear) 35%); }
+  .hero--home .hero__pause { top: calc(72px + 75vw - 56px); bottom: auto; right: var(--space-md); }
 }
 @media (max-height: 30rem) and (orientation: landscape) {
   .hero__logo { display: none; }
